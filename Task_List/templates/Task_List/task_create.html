@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+
+{% block page %}
+
+
+<form method='POST'> {% csrf_token %}
+  {{ form.as_ul }}
+  <input type='Submit' value='Create'>
+</form>
+
+<h3><a href = "{% url 'task:list' %}" > See all your pending tasks here </a></h3>
+
+
+
+{% endblock %}

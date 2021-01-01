@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block page %}
+<!--{{object_list}}-->
+
+  {% for object in object_list%}
+  <ul>
+    <li><p> {{ object.task }} <a href = {% url 'task:delete' object.id %}> <button> Done</button> </a> </p></li>
+  </ul>
+  {% endfor %}
+
+
+<h2> <a href = "{% url 'task:home' %}"> Go back to Home Page </h2>
+
+{% endblock %}

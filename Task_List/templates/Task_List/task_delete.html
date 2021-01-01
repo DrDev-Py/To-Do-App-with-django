@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block page %}
+<!--{{object_list}}-->
+
+<form method='POST'> {% csrf_token %}
+  <p>Are you done with the task : <hr/> <strong><big>{{ object }}</big></strong></p>
+  <input id='done' value='yes' type='submit'>
+</form>
+
+{% endblock %}
